@@ -181,8 +181,8 @@ a{color:inherit;text-decoration:none}
 .team__card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .team__photo{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 18px;border:3px solid var(--paper-2);box-shadow:0 0 0 1px var(--line)}
 .team__photo img{width:100%;height:100%;object-fit:cover}
-.team__card h3{font-size:1.12rem;font-weight:700}
-.team__role{color:var(--red);font-weight:600;font-size:.9rem;margin-bottom:12px}
+.team__card h3{font-size:1.12rem;font-weight:700;margin-bottom:12px}
+.team__role{color:var(--red);font-weight:600;font-size:.9rem;margin-top:-8px;margin-bottom:12px}
 .team__card a{display:block;color:var(--muted);font-size:.92rem;word-break:break-word;transition:color .2s}
 .team__card a:hover{color:var(--red)}
 

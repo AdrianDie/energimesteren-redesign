@@ -1,8 +1,8 @@
 /* ============ ENERGIMESTEREN AS — redesign ============ */
-/* Kundens egen palett (låst): rød #c01e2b / #951722, ink #161616, muted #555757 */
+/* Kundens palett: rød #ff0000 (logo), ink #161616, muted #555757 */
 :root{
-  --red:#c01e2b;
-  --red-dark:#951722;
+  --red:#ff0000;
+  --red-dark:#cc0000;
   --ink:#161616;
   --muted:#555757;
   --paper:#ffffff;
@@ -101,8 +101,8 @@ a{color:inherit;text-decoration:none}
   padding:14px 26px;border-radius:999px;cursor:pointer;border:1.5px solid transparent;
   transition:transform .2s,background .2s,border-color .2s,box-shadow .2s;
 }
-.btn--primary{background:var(--red);color:#fff;box-shadow:0 10px 26px -12px rgba(192,30,43,.7)}
-.btn--primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(192,30,43,.8)}
+.btn--primary{background:var(--red);color:#fff;box-shadow:0 10px 26px -12px rgba(255,0,0,.55)}
+.btn--primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(255,0,0,.65)}
 .btn--ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.4)}
 .btn--ghost:hover{background:rgba(255,255,255,.14);border-color:#fff}
 .btn--block{width:100%}
@@ -115,7 +115,7 @@ a{color:inherit;text-decoration:none}
   text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:700;
   color:var(--red);margin-bottom:14px;
 }
-.kicker--light{color:#ff6b76}
+.kicker--light{color:#ff5555}
 .h2{font-size:clamp(1.7rem,3.8vw,2.7rem);line-height:1.1;font-weight:800;letter-spacing:-.025em}
 .h2--light{color:#fff}
 
@@ -163,7 +163,7 @@ a{color:inherit;text-decoration:none}
   color:#fff;padding:6px 16px;border:1px solid var(--dark-line);border-radius:999px;
   transition:border-color .2s,color .2s;
 }
-.standards__row span:hover{border-color:var(--red);color:#ff6b76}
+.standards__row span:hover{border-color:var(--red);color:#ff5555}
 .standards__note{max-width:58ch;margin:0 auto;color:rgba(255,255,255,.66);font-size:1rem}
 
 /* ---------- ABOUT ---------- */
@@ -192,7 +192,7 @@ a{color:inherit;text-decoration:none}
 .contact__lead{color:rgba(255,255,255,.74);margin:16px 0 30px;max-width:46ch}
 .contact__list{list-style:none;display:flex;flex-direction:column;gap:20px}
 .contact__list li{display:flex;flex-direction:column;gap:3px}
-.contact__k{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:#ff6b76;font-weight:700}
+.contact__k{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:#ff5555;font-weight:700}
 .contact__list a,.contact__list span:not(.contact__k){color:rgba(255,255,255,.9)}
 .contact__list a:hover{color:#fff}
 
@@ -220,7 +220,7 @@ a{color:inherit;text-decoration:none}
   margin-top:clamp(36px,5vw,56px);padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
   font-size:.86rem;color:rgba(255,255,255,.5);
 }
-.footer__credit a{color:#ff6b76}
+.footer__credit a{color:#ff5555}
 .footer__credit a:hover{color:#fff}
 
 /* ---------- REVEAL ---------- */

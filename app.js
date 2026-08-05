@@ -1,56 +1,120 @@
-/* Energimesteren AS — interaksjon */
+/* Energimesteren AS — interaksjon
+   Ingen eksterne avhengigheter: alt kjører på innebygde nettleser-API-er. */
 (function () {
-  // Årstall i footer
-  var y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
+  'use strict';
 
-  // Nav: solid bakgrunn på scroll
-  var nav = document.getElementById('nav');
-  function onScroll() {
-    if (window.scrollY > 24) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
+  var doc = document;
+
+  /* ---------- Årstall i footer ---------- */
+  var year = doc.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  /* ---------- Nav: hårstrek + skygge ved scroll ---------- */
+  var nav = doc.getElementById('nav');
+  if (nav) {
+    var onScroll = function () {
+      nav.classList.toggle('scrolled', window.scrollY > 8);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
-  // Mobilmeny
-  var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  function closeMenu() {
-    links.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }
-  toggle.addEventListener('click', function () {
-    var open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  links.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', closeMenu);
-  });
+  /* ---------- Mobilmeny ---------- */
+  var toggle = doc.getElementById('navToggle');
+  var links = doc.getElementById('navLinks');
 
-  // Scroll-reveal (GSAP hvis tilgjengelig + ikke reduced-motion)
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (window.gsap && window.ScrollTrigger && !reduce) {
-    gsap.registerPlugin(ScrollTrigger);
-    document.documentElement.classList.add('reveal-done');
-    gsap.utils.toArray('[data-reveal]').forEach(function (el) {
-      gsap.fromTo(el,
-        { opacity: 0, y: 26 },
-        {
-          opacity: 1, y: 0, duration: 0.8, ease: 'expo.out',
-          scrollTrigger: { trigger: el, start: 'top 88%' }
-        }
-      );
+  if (toggle && links) {
+    var setMenu = function (open) {
+      links.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Lukk meny' : 'Åpne meny');
+    };
+
+    toggle.addEventListener('click', function () {
+      setMenu(!links.classList.contains('open'));
     });
-    // Subtil parallax på hero-bilde
-    var heroImg = document.querySelector('.hero__bg img');
-    if (heroImg) {
-      gsap.to(heroImg, {
-        yPercent: 12, ease: 'none',
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
-      });
-    }
+
+    // Lukk når man velger et menypunkt
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
+    });
+
+    // Lukk med Escape
+    doc.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    // Rydd opp hvis vinduet utvides forbi mobil-breakpointet
+    var desktop = window.matchMedia('(min-width: 861px)');
+    var onBreakpoint = function (e) { if (e.matches) setMenu(false); };
+    if (desktop.addEventListener) desktop.addEventListener('change', onBreakpoint);
+    else desktop.addListener(onBreakpoint);
+  }
+
+  /* ---------- Scroll-reveal ---------- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = Array.prototype.slice.call(doc.querySelectorAll('[data-reveal]'));
+
+  if (reduce || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-in'); });
   } else {
-    document.documentElement.classList.add('no-gsap');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        // Liten forskyvning mellom søsken gir en rolig kaskade
+        var el = entry.target;
+        var siblings = el.parentElement ? el.parentElement.children : [el];
+        var index = Array.prototype.indexOf.call(siblings, el);
+        el.style.transitionDelay = Math.min(index, 5) * 70 + 'ms';
+        el.classList.add('is-in');
+        observer.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+
+    targets.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ---------- Kontaktskjema ----------
+     Uten backend sendes henvendelsen via brukerens e-postprogram. Skjemaet
+     har fortsatt en vanlig mailto-action som reserveløsning uten JS.
+     Skal skjemaet sende automatisk, bytt action til en skjematjeneste
+     (f.eks. Formspree eller Netlify Forms) og fjern denne handleren. */
+  var form = doc.getElementById('kontaktSkjema');
+  var note = doc.getElementById('formNote');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      if (!form.checkValidity()) return; // la nettleseren vise valideringen
+      e.preventDefault();
+
+      var val = function (name) {
+        var f = form.elements[name];
+        return f && f.value ? f.value.trim() : '';
+      };
+
+      var bedrift = val('bedrift');
+      var subject = 'Henvendelse fra nettsiden' + (bedrift ? ' — ' + bedrift : '');
+
+      var body = [
+        'Navn: ' + val('navn'),
+        bedrift ? 'Bedrift: ' + bedrift : null,
+        'E-post: ' + val('epost'),
+        val('telefon') ? 'Telefon: ' + val('telefon') : null,
+        '',
+        val('melding')
+      ].filter(Boolean).join('\n');
+
+      window.location.href = 'mailto:tgs@energimesteren.no'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      if (note) {
+        note.textContent = 'E-postprogrammet ditt åpnes med meldingen ferdig utfylt. Får du ikke opp noe, send til tgs@energimesteren.no.';
+        note.classList.add('form__note--ok');
+      }
+    });
   }
 })();

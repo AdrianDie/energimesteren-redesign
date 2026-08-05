@@ -3,31 +3,44 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Energimesteren AS — Energisparende SD-anlegg for næringsbygg og offentlige etater</title>
-<meta name="description" content="Energimesteren AS leverer energisparende SD-anlegg for næringsbygg og offentlige etater i Rogaland. Full styring av varme, ventilasjon, lys og solskjerming fra én sentral. Siden 2008." />
-<meta name="theme-color" content="#16181d" />
-<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%23ff0000'/&gt;&lt;path d='M54 18 30 56h18l-4 26 28-42H52z' fill='%23fff'/&gt;&lt;/svg&gt;" />
+<title>Energimesteren AS — Energisparende SD-anlegg i Rogaland</title>
+<meta name="description" content="Energimesteren AS leverer energisparende SD-anlegg til næringsbygg og offentlige bygg i Rogaland. Varme, ventilasjon, lys og solskjerming styrt fra én sentral. Siden 2008." />
+<meta name="theme-color" content="#ffffff" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:site_name" content="Energimesteren AS" />
+<meta property="og:title" content="Energimesteren AS — Energisparende SD-anlegg i Rogaland" />
+<meta property="og:description" content="Varme, ventilasjon, lys og solskjerming styrt fra én sentral. Leverandør av SD-anlegg til næringsbygg og offentlige bygg siden 2008." />
+<meta property="og:image" content="assets/hero-building.jpg" />
+
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='22' fill='%23ff0000'/&gt;&lt;path d='M54 18 30 56h18l-4 26 28-42H52z' fill='%23fff'/&gt;&lt;/svg&gt;" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add('js-reveal');</script>
 </head>
 <body>
 
-<!-- NAV -->
+<a class="skip" href="#hovedinnhold">Hopp til innhold</a>
+
+<!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#top" class="nav__logo" aria-label="Energimesteren AS">
-      <img src="assets/logo.svg" alt="Energimesteren AS" />
+    <a href="#top" class="nav__logo" aria-label="Energimesteren AS — til toppen">
+      <img src="assets/logo.svg" alt="Energimesteren AS" width="622" height="82" />
     </a>
-    <nav class="nav__links" id="navLinks">
-      <a href="#sd-anlegg">SD-anlegg</a>
-      <a href="#fordeler">Fordeler</a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#hvorfor">Hvorfor SD-anlegg</a>
       <a href="#om-oss">Om oss</a>
       <a href="#ansatte">Ansatte</a>
-      <a href="#kontakt" class="nav__cta">Be om pristilbud</a>
+      <a href="#kontakt" class="btn btn--primary btn--sm nav__cta">Be om pristilbud</a>
     </nav>
-    <button class="nav__toggle" id="navToggle" aria-label="Meny" aria-expanded="false">
+
+    <button class="nav__toggle" id="navToggle" aria-label="Åpne meny" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -35,252 +48,400 @@
 
 <main id="top">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero__bg">
-    <img src="assets/hero-building.jpg" alt="Moderne næringsbygg i skumring" />
-    <div class="hero__scrim"></div>
+<!-- ============ HERO ============ -->
+<section class="hero" id="hovedinnhold">
+  <div class="container">
+    <div class="hero__text">
+      <p class="eyebrow" data-reveal><span class="eyebrow__rule" aria-hidden="true"></span>Sandnes · Rogaland · Siden 2008</p>
+      <h1 class="hero__title" data-reveal>Energisparende <span class="nowrap">SD-anlegg</span> for næringsbygg og offentlige bygg</h1>
+      <p class="hero__lead" data-reveal>
+        Et sentraldriftsanlegg er den raskeste veien til lavere energibruk. Vi samler varme,
+        ventilasjon, lys og solskjerming i én sentral, slik at bygget styres smartere — og rimeligere.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#kontakt" class="btn btn--primary">Be om pristilbud</a>
+        <a href="#tjenester" class="btn btn--line">Se hva vi leverer</a>
+      </div>
+    </div>
   </div>
-  <div class="hero__inner">
-    <p class="hero__eyebrow" data-reveal>Energimesteren AS · Sandnes · Siden 2008</p>
-    <h1 class="hero__title" data-reveal>
-      Energisparende <span class="accent">SD-anlegg</span> for næringsbygg og offentlige etater
-    </h1>
-    <p class="hero__lead" data-reveal>
-      Et sentraldriftsanlegg er den raskeste veien til energibesparelse. Vi samler varme, ventilasjon, lys og solskjerming i én sentral, slik at bygget styres smartere og rimeligere.
-    </p>
-    <div class="hero__actions" data-reveal>
-      <a href="#kontakt" class="btn btn--primary">Be om pristilbud</a>
-      <a href="#sd-anlegg" class="btn btn--ghost">Hva er et SD-anlegg?</a>
-    </div>
-    <div class="hero__meta" data-reveal>
-      <span>Rogaland og omegn</span>
-      <span class="dot"></span>
-      <span>Godkjent lærebedrift</span>
-      <span class="dot"></span>
-      <span>Lokal eller skybasert styring</span>
-    </div>
+
+  <div class="container">
+    <figure class="hero__media" data-reveal>
+      <img src="assets/hero-building.jpg" alt="Næringsbygg opplyst i skumringen" fetchpriority="high" decoding="async" />
+    </figure>
+  </div>
+
+  <div class="container">
+    <ul class="facts" data-reveal>
+      <li>
+        <span class="facts__value">100+ bygg</span>
+        <span class="facts__label">Levert siden 2008</span>
+      </li>
+      <li>
+        <span class="facts__value">Rogaland</span>
+        <span class="facts__label">Og omegn</span>
+      </li>
+      <li>
+        <span class="facts__value">Åpne standarder</span>
+        <span class="facts__label">Ingen binding til én leverandør</span>
+      </li>
+      <li>
+        <span class="facts__value">Lokal eller sky</span>
+        <span class="facts__label">Betjenes i nettleser — mobil, nettbrett og PC</span>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- INTRO / SD-ANLEGG -->
-<section class="section" id="sd-anlegg">
-  <div class="container grid-2">
-    <div data-reveal>
-      <p class="kicker">Hva kan et SD-anlegg gjøre for din bedrift?</p>
-      <h2 class="h2">Full oversikt over hele bygget, fra én sentral</h2>
-    </div>
-    <div class="intro__body" data-reveal>
-      <p>
-        Energimesteren AS har hovedfokus på energisparende tiltak for bedrifter, næring og offentlige bygg. Vi har siden 2008 levert SD-anlegg basert på de mest innovative løsningene på markedet, til små og store kunder i Rogaland og omegn.
-      </p>
-      <p>
-        Alt styres enkelt gjennom lokal server eller skybasert sentral server, basert på HTML5. Du når anlegget der du er, på den enheten du har for hånden.
-      </p>
-    </div>
-  </div>
-
-  <!-- WHAT IT CONTROLS -->
-  <div class="container controls">
-    <article class="controls__card" data-reveal>
-      <span class="controls__ico">🌡️</span>
-      <h3>Oppvarming</h3>
-      <p>Behovsstyrt varme som følger bruk og temperatur, rom for rom.</p>
-    </article>
-    <article class="controls__card" data-reveal>
-      <span class="controls__ico">💨</span>
-      <h3>Ventilasjon</h3>
-      <p>Riktig luftmengde til riktig tid, uten unødvendig energibruk.</p>
-    </article>
-    <article class="controls__card" data-reveal>
-      <span class="controls__ico">💡</span>
-      <h3>Lysstyring</h3>
-      <p>Lys som skrur seg av og på etter tilstedeværelse og dagslys.</p>
-    </article>
-    <article class="controls__card" data-reveal>
-      <span class="controls__ico">🪟</span>
-      <h3>Solskjerming</h3>
-      <p>Automatisk solavskjerming som holder inneklimaet stabilt.</p>
-    </article>
-  </div>
-</section>
-
-<!-- FORDELER -->
-<section class="section section--alt" id="fordeler">
+<!-- ============ TJENESTER ============ -->
+<section class="section" id="tjenester">
   <div class="container">
     <div class="section__head" data-reveal>
-      <p class="kicker">Hvilke fordeler får du med SD-anlegg?</p>
-      <h2 class="h2">Mindre energibruk, mer kontroll</h2>
-    </div>
-    <div class="bento">
-      <article class="bento__card bento__card--wide" data-reveal>
-        <span class="bento__num">01</span>
-        <h3>Skreddersydd for ditt behov</h3>
-        <p>Vi tilpasser systemet etter behov og faktisk energibruk, fra et enkelt oppsett til et komplekst smartbygg. Du betaler for det bygget ditt trenger.</p>
-      </article>
-      <article class="bento__card" data-reveal>
-        <span class="bento__num">02</span>
-        <h3>Full oversikt</h3>
-        <p>Komplett administrasjon over elektriske og tekniske installasjoner, samlet på ett sted.</p>
-      </article>
-      <article class="bento__card" data-reveal>
-        <span class="bento__num">03</span>
-        <h3>Løpende tilpasning</h3>
-        <p>Gjør justeringer på hele anlegget fra én og samme sentral, når som helst.</p>
-      </article>
-      <article class="bento__card bento__card--wide" data-reveal>
-        <span class="bento__num">04</span>
-        <h3>Økonomisk for små og store</h3>
-        <p>Energisparende drift gir reelle besparelser, enten du har ett bygg eller en hel portefølje. Investeringen tjener seg inn på lavere driftskostnader.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- TECH STANDARDS -->
-<section class="standards">
-  <div class="container">
-    <p class="standards__label" data-reveal>Vi bygger på kjente, åpne standarder</p>
-    <div class="standards__row" data-reveal>
-      <span>Bacnet</span><span>UPC</span><span>UA</span><span>Dali</span><span>SMI</span><span>IoT</span><span>JSON</span><span>MQTT</span><span>HTML5</span>
-    </div>
-    <p class="standards__note" data-reveal>Lang erfaring med integrasjon mot ledende systemer, slik at anlegget snakker sammen på tvers av leverandører.</p>
-  </div>
-</section>
-
-<!-- OM OSS / LÆREBEDRIFT -->
-<section class="section" id="om-oss">
-  <div class="container grid-2 about">
-    <div class="about__text" data-reveal>
-      <p class="kicker">Om Energimesteren</p>
-      <h2 class="h2">Godkjent lærebedrift med høy kompetanse</h2>
-      <p>
-        Energimesteren er en godkjent lærebedrift. Våre erfarne medarbeidere har høy kompetanse og mye å lære bort. Er du på utkikk etter lærlingplass? Send oss gjerne en henvendelse.
+      <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Hva vi tilbyr</p>
+      <h2>Full oversikt over hele bygget</h2>
+      <p class="section__lead">
+        Vi prosjekterer, leverer og setter i drift SD-anlegg tilpasset bygget ditt — fra et enkelt
+        oppsett til et komplett smartbygg.
       </p>
-      <a href="#kontakt" class="btn btn--primary">Ta kontakt</a>
     </div>
-    <div class="about__badge" data-reveal>
-      <img src="assets/laerebedrift.svg" alt="Godkjent lærebedrift" loading="lazy" />
-    </div>
-  </div>
-</section>
 
-<!-- ANSATTE -->
-<section class="section section--alt" id="ansatte">
-  <div class="container">
-    <div class="section__head" data-reveal>
-      <p class="kicker">Våre ansatte</p>
-      <h2 class="h2">Folkene bak anlegget</h2>
-    </div>
-    <div class="team">
-      <article class="team__card" data-reveal>
-        <div class="team__photo"><img src="assets/terje.jpg" alt="Terje Gilje Sørnes" loading="lazy" /></div>
-        <h3>Terje Gilje Sørnes</h3>
-        <p class="team__role">Daglig leder</p>
-        <a href="mailto:tgs@energimesteren.no">tgs@energimesteren.no</a>
-        <a href="tel:+4741329840">413 29 840</a>
+    <div class="cards">
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13.5V5a2 2 0 1 1 4 0v8.5a4 4 0 1 1-4 0Z"/><path d="M12 9v5"/>
+          </svg>
+        </span>
+        <h3>Oppvarming</h3>
+        <p>Behovsstyrt varme som følger faktisk bruk og temperatur, rom for rom.</p>
       </article>
-      <article class="team__card" data-reveal>
-        <div class="team__photo"><img src="assets/janmartin.jpg" alt="Jan Martin Pedersen" loading="lazy" /></div>
-        <h3>Jan Martin Pedersen</h3>
-        <a href="mailto:Jmp@energimesteren.no">Jmp@energimesteren.no</a>
-        <a href="tel:+4796043888">960 43 888</a>
-      </article>
-      <article class="team__card" data-reveal>
-        <div class="team__photo"><img src="assets/eivind.jpg" alt="Eivind Nærland" loading="lazy" /></div>
-        <h3>Eivind Nærland</h3>
-        <a href="mailto:en@energimesteren.no">en@energimesteren.no</a>
-        <a href="tel:+4791732855">917 32 855</a>
-      </article>
-      <article class="team__card" data-reveal>
-        <div class="team__photo"><img src="assets/nikolai.jpg" alt="Nikolai Frafjord Sunde" loading="lazy" /></div>
-        <h3>Nikolai Frafjord Sunde</h3>
-        <a href="mailto:nfs@energimesteren.no">nfs@energimesteren.no</a>
-        <a href="tel:+4798178133">981 78 133</a>
-      </article>
-    </div>
-  </div>
-</section>
 
-<!-- KONTAKT -->
-<section class="contact" id="kontakt">
-  <div class="container grid-2 contact__grid">
-    <div class="contact__info" data-reveal>
-      <p class="kicker kicker--light">Kontakt oss</p>
-      <h2 class="h2 h2--light">Kontakt oss i dag for en uforpliktende prat</h2>
-      <p class="contact__lead">Lurer du på hva et SD-anlegg kan spare bygget ditt for? Send oss noen ord, så tar vi en prat om mulighetene.</p>
-      <ul class="contact__list">
-        <li>
-          <span class="contact__k">Energimesteren AS</span>
-          <span>Stokkamyrveien 13, 4313 Sandnes</span>
-        </li>
-        <li>
-          <span class="contact__k">E-post</span>
-          <a href="mailto:tgs@energimesteren.no">tgs@energimesteren.no</a>
-        </li>
-        <li>
-          <span class="contact__k">Telefon</span>
-          <a href="tel:+4741329840">413 29 840</a>
-        </li>
-        <li>
-          <span class="contact__k">Åpningstider</span>
-          <span>07:00 – 16:00</span>
-        </li>
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/>
+          </svg>
+        </span>
+        <h3>Ventilasjon</h3>
+        <p>Riktig luftmengde til riktig tid, uten å bruke energi på tomme rom.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5.9 1.2.9 1.9v.3h5.4v-.3c0-.7.3-1.4.9-1.9A6 6 0 0 0 12 3Z"/>
+          </svg>
+        </span>
+        <h3>Lysstyring</h3>
+        <p>Lys som skrur seg av og på etter tilstedeværelse og tilgjengelig dagslys.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M3 14h18"/>
+          </svg>
+        </span>
+        <h3>Solskjerming</h3>
+        <p>Automatisk solavskjerming som holder inneklimaet stabilt gjennom dagen.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/><path d="M7 8h6"/>
+          </svg>
+        </span>
+        <h3>Sentral styring</h3>
+        <p>Lokal server eller skybasert sentral, bygget på HTML5. Du når anlegget der du er.</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/>
+            <path d="M12 7.2v4.3"/><path d="M11 12.6 6.4 17"/><path d="M13 12.6 17.6 17"/>
+          </svg>
+        </span>
+        <h3>Integrasjon</h3>
+        <p>Lang erfaring med integrasjon mot ledende systemer, på tvers av leverandører.</p>
+      </article>
+
+      <article class="card card--wide" data-reveal>
+        <span class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="7.5" y="7.5" width="9" height="9" rx="1.5"/>
+            <path d="M10 4v3.5M14 4v3.5M10 16.5V20M14 16.5V20M4 10h3.5M4 14h3.5M16.5 10H20M16.5 14H20"/>
+          </svg>
+        </span>
+        <div class="card__body">
+          <h3>PLS-baserte styringssystemer for bygg og industri</h3>
+          <p>
+            Vi programmerer og leverer PLS-styring til alle tekniske installasjoner — i bygg
+            og i industrien. Styringen bygges opp etter anlegget den skal drive, enten det er
+            teknikken i et næringsbygg eller et frittstående industrianlegg.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="standards" data-reveal>
+      <p class="standards__label">Vi bygger på kjente, åpne standarder</p>
+      <ul class="standards__row">
+        <li>BACnet</li><li>KNX</li><li>OPC UA</li><li>Modbus</li><li>Mbus</li>
+        <li>MP-buss</li><li>DALI</li><li>SMI</li><li>MQTT</li><li>HTML5</li>
       </ul>
     </div>
-    <form class="contact__form" data-reveal action="mailto:tgs@energimesteren.no" method="post" enctype="text/plain">
+  </div>
+</section>
+
+<!-- ============ HVORFOR ============ -->
+<section class="section section--surface" id="hvorfor">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Hvorfor SD-anlegg</p>
+      <h2>Mindre energibruk, mer kontroll</h2>
+    </div>
+
+    <ol class="reasons">
+      <li data-reveal>
+        <span class="reasons__num">01</span>
+        <div>
+          <h3>Skreddersydd for behovet ditt</h3>
+          <p>Vi tilpasser systemet etter faktisk energibruk og drift — fra et enkelt oppsett til et komplekst smartbygg. Du betaler for det bygget ditt faktisk trenger.</p>
+        </div>
+      </li>
+      <li data-reveal>
+        <span class="reasons__num">02</span>
+        <div>
+          <h3>Full oversikt på ett sted</h3>
+          <p>Komplett administrasjon av elektriske og tekniske installasjoner, samlet i ett grensesnitt.</p>
+        </div>
+      </li>
+      <li data-reveal>
+        <span class="reasons__num">03</span>
+        <div>
+          <h3>Løpende tilpasning</h3>
+          <p>Juster hele anlegget fra samme sentral, når som helst — uten å måtte være fysisk til stede i bygget.</p>
+        </div>
+      </li>
+      <li data-reveal>
+        <span class="reasons__num">04</span>
+        <div>
+          <h3>Lønnsomt for små og store</h3>
+          <p>Energisparende drift gir reelle besparelser, enten du har ett bygg eller en hel portefølje. Investeringen tjenes inn på lavere driftskostnader.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ OM OSS ============ -->
+<section class="section" id="om-oss">
+  <div class="container about">
+    <div class="about__text" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Hvem vi er</p>
+      <h2>Et lokalt fagmiljø med energi som spesialfelt</h2>
+      <p>
+        Energimesteren AS holder til på Stokkamyrveien i Sandnes og har hovedfokus på energisparende
+        tiltak for bedrifter, næringsbygg og offentlige bygg. Siden 2008 har vi levert til over
+        100 bygg — for små og store kunder i Rogaland og omegn.
+      </p>
+      <p>
+        Vi er en godkjent lærebedrift. Medarbeiderne våre har lang erfaring og mye å lære bort — er du
+        på utkikk etter lærlingplass, hører vi gjerne fra deg.
+      </p>
+      <div class="about__actions">
+        <a href="#kontakt" class="btn btn--primary">Ta kontakt</a>
+        <a href="#ansatte" class="btn btn--line">Møt folkene</a>
+      </div>
+    </div>
+
+    <aside class="about__side" data-reveal>
+      <img class="about__badge" src="assets/laerebedrift.svg" alt="Godkjent lærebedrift" loading="lazy" />
+      <dl class="about__list">
+        <div><dt>Etablert</dt><dd>2008</dd></div>
+        <div><dt>Adresse</dt><dd>Stokkamyrveien 13, 4313 Sandnes</dd></div>
+        <div><dt>Marked</dt><dd>Næringsbygg og offentlige bygg</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ ANSATTE ============ -->
+<section class="section section--surface" id="ansatte">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Ansatte</p>
+      <h2>Folkene bak anlegget</h2>
+      <p class="section__lead">Ta gjerne kontakt direkte med den som passer best for din henvendelse.</p>
+    </div>
+
+    <div class="team">
+      <article class="person" data-reveal>
+        <img class="person__photo" src="assets/terje.jpg" alt="Terje Gilje Sørnes" loading="lazy" />
+        <div class="person__body">
+          <h3>Terje Gilje Sørnes</h3>
+          <p class="person__role">Daglig leder</p>
+          <a href="mailto:tgs@energimesteren.no">tgs@energimesteren.no</a>
+          <a href="tel:+4741329840">413 29 840</a>
+        </div>
+      </article>
+
+      <article class="person" data-reveal>
+        <img class="person__photo" src="assets/janmartin.jpg" alt="Jan Martin Pedersen" loading="lazy" />
+        <div class="person__body">
+          <h3>Jan Martin Pedersen</h3>
+          <p class="person__role">Automasjonsingeniør</p>
+          <a href="mailto:jmp@energimesteren.no">jmp@energimesteren.no</a>
+          <a href="tel:+4796043888">960 43 888</a>
+        </div>
+      </article>
+
+      <article class="person" data-reveal>
+        <img class="person__photo" src="assets/eivind.jpg" alt="Eivind Nærland" loading="lazy" />
+        <div class="person__body">
+          <h3>Eivind Nærland</h3>
+          <p class="person__role">Automatiker</p>
+          <a href="mailto:en@energimesteren.no">en@energimesteren.no</a>
+          <a href="tel:+4791732855">917 32 855</a>
+        </div>
+      </article>
+
+      <article class="person" data-reveal>
+        <img class="person__photo" src="assets/nikolai.jpg" alt="Nikolai Frafjord Sunde" loading="lazy" />
+        <div class="person__body">
+          <h3>Nikolai Frafjord Sunde</h3>
+          <p class="person__role">Lærling</p>
+          <a href="mailto:nfs@energimesteren.no">nfs@energimesteren.no</a>
+          <a href="tel:+4798178133">981 78 133</a>
+        </div>
+      </article>
+
+      <article class="person" data-reveal>
+        <span class="person__photo person__photo--initials" aria-hidden="true">EL</span>
+        <div class="person__body">
+          <h3>Eivind Wegner Lindeland</h3>
+          <p class="person__role">Lærling</p>
+          <a href="mailto:ewl@energimesteren.no">ewl@energimesteren.no</a>
+          <a href="tel:+4747178334">471 78 334</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="contact" id="kontakt">
+  <div class="container contact__grid">
+    <div class="contact__info" data-reveal>
+      <p class="eyebrow eyebrow--dark"><span class="eyebrow__rule" aria-hidden="true"></span>Kontakt</p>
+      <h2>Ta en uforpliktende prat med oss</h2>
+      <p class="contact__lead">
+        Lurer du på hva et SD-anlegg kan spare bygget ditt for? Send oss noen ord om bygget og
+        behovet, så tar vi kontakt.
+      </p>
+      <dl class="contact__list">
+        <div>
+          <dt>Besøksadresse</dt>
+          <dd>Stokkamyrveien 13, 4313 Sandnes</dd>
+        </div>
+        <div>
+          <dt>E-post</dt>
+          <dd><a href="mailto:tgs@energimesteren.no">tgs@energimesteren.no</a></dd>
+        </div>
+        <div>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+4741329840">413 29 840</a></dd>
+        </div>
+        <div>
+          <dt>Åpningstider</dt>
+          <dd>07:00–16:00</dd>
+        </div>
+      </dl>
+    </div>
+
+    <form class="form" id="kontaktSkjema" data-reveal action="mailto:tgs@energimesteren.no" method="post" enctype="text/plain">
       <div class="field">
         <label for="navn">Navn</label>
-        <input id="navn" name="navn" type="text" placeholder="Ditt navn" required />
+        <input id="navn" name="navn" type="text" autocomplete="name" placeholder="Ditt navn" required />
       </div>
       <div class="field">
-        <label for="epost">E-post</label>
-        <input id="epost" name="epost" type="email" placeholder="navn@bedrift.no" required />
+        <label for="bedrift">Bedrift <span class="field__opt">(valgfritt)</span></label>
+        <input id="bedrift" name="bedrift" type="text" autocomplete="organization" placeholder="Bedriftsnavn" />
       </div>
-      <div class="field">
-        <label for="telefon">Telefon</label>
-        <input id="telefon" name="telefon" type="tel" placeholder="Telefonnummer" />
+      <div class="field-row">
+        <div class="field">
+          <label for="epost">E-post</label>
+          <input id="epost" name="epost" type="email" autocomplete="email" placeholder="navn@bedrift.no" required />
+        </div>
+        <div class="field">
+          <label for="telefon">Telefon <span class="field__opt">(valgfritt)</span></label>
+          <input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="000 00 000" />
+        </div>
       </div>
       <div class="field">
         <label for="melding">Melding</label>
-        <textarea id="melding" name="melding" rows="4" placeholder="Fortell kort om bygget og behovet ditt" required></textarea>
+        <textarea id="melding" name="melding" rows="5" placeholder="Fortell kort om bygget og behovet ditt" required></textarea>
       </div>
       <button type="submit" class="btn btn--primary btn--block">Send henvendelse</button>
+      <p class="form__note" id="formNote" role="status">
+        Skjemaet åpner e-postprogrammet ditt med meldingen ferdig utfylt.
+      </p>
     </form>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <img src="assets/logo.svg" alt="Energimesteren AS" class="footer__logo" />
-      <p>Energisparende SD-anlegg for næringsbygg og offentlige etater i Rogaland. Siden 2008.</p>
+      <img src="assets/logo-on-dark.svg" alt="Energimesteren AS" class="footer__logo" width="622" height="82" loading="lazy" />
+      <p>Energisparende SD-anlegg for næringsbygg og offentlige bygg i Rogaland. Siden 2008.</p>
     </div>
     <div class="footer__col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:tgs@energimesteren.no">tgs@energimesteren.no</a>
       <a href="tel:+4741329840">413 29 840</a>
-      <span>Stokkamyrveien 13, 4313 Sandnes</span>
+      <span>Stokkamyrveien 13<br />4313 Sandnes</span>
     </div>
     <div class="footer__col">
-      <h4>Snarveier</h4>
-      <a href="#sd-anlegg">SD-anlegg</a>
-      <a href="#fordeler">Fordeler</a>
+      <h3>Snarveier</h3>
+      <a href="#tjenester">Tjenester</a>
+      <a href="#hvorfor">Hvorfor SD-anlegg</a>
+      <a href="#om-oss">Om oss</a>
       <a href="#ansatte">Ansatte</a>
       <a href="#kontakt">Kontakt</a>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <span>© <span id="year"></span> Energimesteren AS · Org. og levering i Rogaland</span>
-    <span class="footer__credit">Nettside levert av <a href="https://dmarketing.no" target="_blank" rel="noopener">Dietrichs Marketing</a></span>
+  <div class="container footer__bottom">
+    <span>© <span id="year">2026</span> Energimesteren AS</span>
+    <span>Nettside levert av <a href="https://dmarketing.no" target="_blank" rel="noopener">Dietrichs Marketing</a></span>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="app.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Energimesteren AS",
+  "description": "Energisparende SD-anlegg for næringsbygg og offentlige bygg i Rogaland.",
+  "foundingDate": "2008",
+  "email": "tgs@energimesteren.no",
+  "telephone": "+4741329840",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stokkamyrveien 13",
+    "postalCode": "4313",
+    "addressLocality": "Sandnes",
+    "addressCountry": "NO"
+  },
+  "areaServed": "Rogaland"
+}
+</script>
+
+<script src="app.js" defer></script>
 </body>
 </html>
